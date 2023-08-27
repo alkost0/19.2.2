@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница контактов - Практика 19.2</title>
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Мои контакты</h1>
+      <p></p>
+      <p>Телефон: +7-902-333-66-22</p>
+      <p>Скайп: test-skype</p>
+      <p>E-mail: alkost@mail.com</p>
+    </header>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h2 class="my-0 font-weight-normal">Свяжитесь с нами</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <br>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Ваше имя"><br>
+                        <input type="text" name="phone" class="form-control" id="phone" placeholder="Контактный телефон" required><br>
+                        <textarea name="message" class="form-control" id="message" placeholder="Сообщение" required></textarea><br>
+                        <input class="btn btn-lg btn-block btn-outline-primary" type="submit" value="Отправить"/>
+                    </form>
+                </div>
+            </div>
+
+
+  </body>
+</html>
